@@ -7,7 +7,7 @@
 ## Table of Contents
 
 - [Root Files](#root-Files)
-- [Src Foler](#src)
+- [Src Folder](#src)
   - [Routes](#routes)
   - [Models](#models)
   - [Middleware](#middleware)
