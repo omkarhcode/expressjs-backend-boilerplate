@@ -8,12 +8,12 @@
 
 - [Root Files](#root-Files)
 - [Src Folder](#src)
+  - [Config](#config)
+  - [Controllers](#controller)
+  - [Middleware](#middleware)
   - [Routes](#routes)
   - [Models](#models)
-  - [Middleware](#middleware)
   - [Utils](#utils)
-  - [Templates](#templates)
-  - [Config](#config)
 
 ## Root Files
 
@@ -24,6 +24,16 @@
 ## Src
 
 - `/src` - Src folder will further hold directories.
+  
+  ### Config
+    `src/config` - Configuration files for third party APIs/services like passport/S3,etc. Naming of files: Normal project file naming scheme.
+
+  ### Controllers
+    `src/controllers` - Controllers will be responsible to handle all the incoming requests to your application which will either render a page in response, may send a JSON payload or will handle other critical API related actions like POST, PUT, DELETE etc.
+  
+  ### Middleware
+    `src/middleware` - This folder would contain all the middleware that you have created, whether it be authentication/some other function. Naming of files: `xxxxx.middleware.js`
+    These helpers could range from critical middleware like Body Parser, Global Error Handlers, Authentication Middleware, enabling CORS, Attaching Custom Headers or setting a View Engine in ExpressJS.
 
   ### Routes
     `src/routes` - This folder would contain all the routes that you have created using Express Router and what they do would be exported from a Controller file. Naming of files: `xxxxx.routes.js`
@@ -31,14 +41,6 @@
   ### Models
     `src/models` - This folder would contain all your schema files and the functions required for the schema would also lie over here. Naming of files: `xxxxx.js`
 
-  ### Middleware
-    `src/middleware` - This folder would contain all the middleware that you have created, whether it be authentication/some other function. Naming of files: `xxxxx.middleware.js`
-
   ### Utils
-    `src/utils` (Optional) - The common functions that you would require multiple times throughout your code. Naming of files: Normal project file naming scheme.
+    `src/utils` - The utils directory will have all the utilities and helpers needed for the application. It will also act as a place to put shared logic, if any. For example, a simple helper to calculate the offset for a paginated SQL query can be put in a helper.util.js file in this folder.
 
-  ### Templates
-    `src/templates` (Optional) - If your code requires you to send certain emails/ HTML code to the client-side, store it in this files. Naming of files: Normal project file naming scheme.
-
-  ### Config
-    `src/config` (Optional) - Configuration files for third party APIs/services like passport/S3,etc. Naming of files: Normal project file naming scheme.
